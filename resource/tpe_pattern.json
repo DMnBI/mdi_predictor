@@ -1,0 +1,370 @@
+{
+	"data": [
+		{
+			"name" : "BAC_V_DIS",
+			"description" : "BAC cause DIS",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) bac00.+> *} * <vp <(vb|vbp|vbd) .+> * {np * <(n.+|j.+) dis00.+> *} *> *} *}",
+			"index" : 1
+		},
+		{
+			"name" : "BAC_V_DIS",
+			"description" : "BAC cause DIS",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) bac00.+> *} * <vp <vbz .+> * {np *!<vp *> <(n.+|j.+) dis00.+> *} *> *} *}",
+			"index" : 1
+		},
+		{
+			"name" : "BAC_beax_Ving_DIS",
+			"description" : "BAC is causing DIS",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) bac00.+> *} * <vp <vbg .+> * {np <(n.+|j.+) dis00.+> *} *> *} *}",
+			"index" : 1
+		},
+
+		{
+			"name" : "DIS_beax_Vpp_PP_BAC",
+			"description" : "DIS is caused by BAC",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) dis00.+> *} * <vp <vbn .+> * <pp * <(in|to) *> * {np *!<vp *> <(n.+|j.+) bac00.+> *} *> *> *} *}",
+			"index" : 2
+		},
+		{
+			"name" : "BAC_beax_Vpp_PP_DIS",
+			"description" : "BAC is isolated from DIS",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) bac00.+> *} * <vp * <vbn .+> * <pp * <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *> *> *} *}",
+			"index" : 2
+		},
+		{
+			"name" : "BAC_V_PP_DIS",
+			"description" : "BAC improved in DIS",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) bac00.+> *} *!<pp *> <vp <(vbz|vbd) .+> * <pp <(in|to) *> {np * <(n.+|j.+) dis00.+> *} *> *> *} *}",
+			"index" : 2
+		},
+		{
+			"name" : "BAC_V_PP_DIS",
+			"description" : "BAC can respond to DIS",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) bac00.+> *} *!<pp *> <vp <vb .+> * {pp <(in|to) *> {np *!<pp *> <(n.+|j.+) dis00.+> *} *} *> *} *}",
+			"index" : 2
+		},
+
+		{
+			"name" : "BAC_V_N_PP_obj",
+			"description" : "BAC cause something of DIS",
+			"pattern" : "{.+ * {s {np * <(n.+|j.+) bac00.+> *} * {vp <(vbz|vbp|vbd) *> *<advp *> {np * <(n.+|j.+) .+> <pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *> *} *} *} *}",
+			"index" : 3
+		},
+		{
+			"name" : "N_PP_DIS_V_BAC",
+			"description" : "something of DIS is BAC",
+			"pattern" : "{.+ * {s {np {np * <(n.+|j.+) .+> *} <pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *> *} * {vp <vb.+ be> *<advp *> {np * <(n.+|j.+) bac00.+> *} *} *} *}",
+			"index" : 3
+		},
+		{
+			"name" : "BAC_be_N_PP_obj",
+			"description" : "BAC is something to DIS",
+			"pattern" : "{.+ * {s *!<v.+ *> {np * <(n.+|j.+) bac00.+> *} * {vp <(vbz|vbp|vbd) be> *!<(vp|pp) *> {np * <(n.+|j.+) .+> *} <pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *> *} *} *}",
+			"index" : 3
+		},
+		{
+			"name" : "BAC_V_to_V_DIS",
+			"description" : "BAC uses to control DIS",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) bac00.+> *} * {vp <vbz *> * <vp <to *> <vp <vb .+> * {np *!<vp *> <(n.+|j.+) dis00.+> *} *> *> *} *} *}",
+			"index" : 4
+		},
+		{
+			"name" : "DIS_Vpp_to_V_BAC",
+			"description" : "DIS is designed to achieve BAC",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) dis00.+> *} * {vp <vbn *> * <vp <to *> <vp <vb .+> * {np * <(n.+|j.+) bac00.+> *} *> *> *} *} *}",
+			"index" : 4
+		},
+		{
+			"name" : "BAC_Vpp_to_V_DIS",
+			"description" : "BAC is implemented to prevent DIS",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) bac00.+> *} * {vp <vbn *> * <vp <to *> <vp <vb .+> * {np * <(n.+|j.+) dis00.+> *} *> *> *} *} *}",
+			"index" : 4
+		},
+		{
+			"name" : "DIS_V_to_V_N_PP_BAC",
+			"description" : "DIS seems to be something for BAC",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) dis00.+> *} * {vp * <to *> <vp <vb.+ be> * {np * {np * <(n.+|j.+) .+> *} <pp <(in|to) *> * {np * <(n.+|j.+) bac00.+> *} *> *} *> *> *} *} *}",
+			"index" : 4
+		},
+
+		{
+			"name" : "BAC_V_JJ_PP_DIS",
+			"description" : "BAC were resistant to DIS",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) bac00.+> *} * {vp <vb.+ be> *!<pp *> <j.+ .+> <pp <(in|to) *> {np *!<(vp|pp) *> <(n.+|j.+) dis00.+> *} *> *} *} *}",
+			"index" : 5
+		},
+		{
+			"name" : "DIS_V_to_be_JJ_PP_BAC",
+			"description" : "DIS was found to be effective against BAC",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) dis00.+> *} * {vp <vb be> * <j.+ .+> <pp <in *> {np * <(n.+|j.+) bac00.+> *} *> *} *}",
+			"index" : 5
+		},
+
+		{
+			"name" : "to_V_DIS_BAC",
+			"description" : "to cause DIS, BAC",
+			"pattern" : "{.+ * <vp <to *> <vp <vb .+> * {np * <(n.+|j.+) dis00.+> *} *> *> *<, ,> {np * <(n.+|j.+) bac00.+> *} *}",
+			"index" : 7
+		},
+		{
+			"name" : "PP_DIS_BAC_V",
+			"description" : "in DIS, BAC was reduced",
+			"pattern" : "{.+ * <pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *> *<, ,> {np * <(n.+|j.+) bac00.+> *} {vp * <vbn .+> *} *}",
+			"index" : 7
+		},
+
+		{
+			"name" : "BAC_Wh_V_DIS",
+			"description" : "BAC that causes DIS",
+			"pattern" : "{.+ * {np * <(n.+|j.+) bac00.+> *} *<, ,> {sbar <w.+ *> * <vp <vbz .+> * {np * <(n.+|j.+) dis00.+> *} *> *} *}",
+			"index" : 8
+		},
+		{
+			"name" : "BAC_Wh_beax_Ving_DIS",
+			"description" : "BAC that is causing DIS",
+			"pattern" : "{.+ * {np * <(n.+|j.+) bac00.+> *} *<, ,> {sbar <w.+ *> * <vp <vbg .+> * {np * <(n.+|j.+) dis00.+> *} *> *} *}",
+			"index" : 8
+		},
+		{
+			"name" : "DIS_Wh_beax_Vpp_PP_BAC",
+			"description" : "DIS that is caused by BAC",
+			"pattern" : "{.+ * {np * <(n.+|j.+) dis00.+> *} *<, ,> {sbar <w.+ *> * <vp <vbn .+> * <pp <(in|to) *> * {np * <(n.+|j.+) bac00.+> *} *> *> *} *}",
+			"index" : 8
+		},
+		{
+			"name" : "BAC_omit_Ving_DIS",
+			"description" : "BAC (that is) causing DIS",
+			"pattern" : "{.+ * {np * <(n.+|j.+) bac00.+> *} *<, ,> <vp <vbg .+> * {np * <(n.+|j.+) dis00.+> *} *> *}",
+			"index" : 8
+		},
+
+		{
+			"name" : "DIS_omit_Ving_BAC",
+			"description" : "DIS (that is) causing BAC",
+			"pattern" : "{.+ * {np * <(n.+|j.+) dis00.+> *} *<, ,> <vbg .+> * {np * <(n.+|j.+) bac00.+> *} *}",
+			"index" : 9
+		},
+		{
+			"name" : "DIS_omit_Vpp_PP_BAC",
+			"description" : "DIS (that is) caused by BAC",
+			"pattern" : "{.+ * {np * <(n.+|j.+) dis00.+> *} *<, ,> <vp *<advp *> <vbn .+> * <pp <(in|to) *> * {np * <(n.+|j.+) bac00.+> *} *> *> *}",
+			"index" : 9
+		},
+		{
+			"name" : "BAC_omit_Vpp_PP_DIS",
+			"description" : "BAC (that is) isolated from DIS",
+			"pattern" : "{.+ * {np * <(n.+|j.+) bac00.+> *} *<, ,> {vp <vbn .+> * <pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *> *} *}",
+			"index" : 9
+		},
+		{
+			"name" : "BAC_omit_Vpp_DIS",
+			"description" : "BAC (that is) caused DIS",
+			"pattern" : "{.+ * {np * <(n.+|j.+) bac00.+> *} *<(,|:) *> <vp <vbn .+> * {np * <(n.+|j.+) dis00.+> *} *> *}",
+			"index" : 9
+		},
+
+		{
+			"name" : "BAC_Wh_V_N_PP_DIS",
+			"description" : "BAC that is something of DIS",
+			"pattern" : "{.+ * {np * <(n.+|j.+) bac00.+> *} *<, ,> {sbar <w.+ *> * <vp <v.+ *> * {np * <(n.+|j.+) .+> <pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *> *} *> *} *}",
+			"index" : 10
+		},
+		{
+			"name" : "DIS_Wh_N_V_BAC",
+			"description" : "DIS whose cause is BAC",
+			"pattern" : "{.+ * {np * <(n.+|j.+) dis00.+> *} *<, ,> {sbar <w.+ *> * <n.+ .+> <vp <v.+ *> * {np * <(n.+|j.+) bac00.+> *} *> *} *}",
+			"index" : 10
+		},
+		{
+			"name" : "BAC_V_N_Wh_V_DIS",
+			"description" : "BAC is pathogen that cause DIS",
+			"pattern" : "{.+ * {s {np * <(n.+|j.+) bac00.+> *} * <vp <v.+ *> * {n.+ * {np * <n.+ *> *} *<, ,> {sbar <w.+ *> * {vp <vbz .+> * {np * <(n.+|j.+) dis00.+> *} *> *} *} *} *} *}",
+			"index" : 10
+		},
+		{
+			"name" : "BAC_V_N_Wh_beax_Vpp_PP_DIS",
+			"description" : "BAC is something that has been linked to DIS",
+			"pattern" : "{.+ * {s {np * <(n.+|j.+) bac00.+> *} * <vp <v.+ *> * {n.+ * {np * <n.+ *> *} *<, ,> {sbar <w.+ *> * <vp <vbn .+> * {pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *} *> *} *} *> *} *}",
+			"index" : 10
+		},
+		{
+			"name" : "DIS_V_N_Wh_beax_Vpp_PP_BAC",
+			"description" : "DIS is pathogen that is caused by BAC",
+			"pattern" : "{.+ * {s {np * <(n.+|j.+) dis00.+> *} * <vp <v.+ *> * {n.+ * {np * <n.+ *> *} *<, ,> {sbar <w.+ *> * <vp <vbn .+> * <pp <(in|to) *> * {np * <(n.+|j.+) bac00.+> *} *> *> *} *} *> *} *}",
+			"index" : 10
+		},
+		{
+			"name" : "DIS_PP_N_omit_Vpp_PP_BAC",
+			"description" : "DIS of something caused by BAC",
+			"pattern" : "{.+ * {np * <(n.+|j.+) dis00.+> *} {pp <(in|to) *> * {np * <n.+ *> *} *<, ,> <vp <vbn .+> * <pp <(in|to) *> * {np * <(n.+|j.+) bac00.+> *} *> *> *} *}",
+			"index" : 10
+		},
+		{
+			"name" : "BAC_V_N_Wh_V_N_PP_DIS",
+			"description" : "BAC is pathogen that become cause of DIS",
+			"pattern" : "{.+ * {s {np * <(n.+|j.+) bac00.+> *} * <vp <v.+ *> * {n.+ * {np * <n.+ *> *} *<, ,> {sbar <w.+ *> * <vp <v.+ *> * {np * <(n.+|j.+) .+> {pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *} *} *> *} *} *> *} *}",
+			"index" : 10
+		},
+
+		{
+			"name" : "BAC_V_N_omit_Ving_DIS",
+			"description" : "BAC is pathogen (that is) causing DIS",
+			"pattern" : "{.+ * {s {np * <(n.+|j.+) bac00.+> *} * {vp <v.+ *> * {np * <n.+ *> *} *<, ,> <vp *<advp *> <vbg .+> * {np * <(n.+|j.+) dis00.+> *} *> *} *} *}",
+			"index" : 11
+		},
+		{
+			"name" : "DIS_V_N_omit_Vpp_PP_BAC",
+			"description" : "DIS is something (that is) caused by BAC",
+			"pattern" : "{.+ * {s {np * <(n.+|j.+) dis00.+> *} * {vp <v.+ *> * {np * <n.+ *> *} *<, ,> <vp <vbn .+> * <pp <(in|to) *> * {np * <(n.+|j.+) bac00.+> *} *> *> *} *} *}",
+			"index" : 11
+		},
+		{
+			"name" : "BAC_V_N_omit_Vpp_PP_DIS",
+			"description" : "BAC is something (that is) isolated with DIS",
+			"pattern" : "{.+ * {s {np * <(n.+|j.+) bac00.+> *} {vp <v.+ *> *!<pp *> {np * <n.+ *> *} *<, ,> <vp *<advp *> <vbn .+> * <pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *> *> *} *} *}",
+			"index" : 11
+		},
+		{
+			"name" : "N_omit_Vpp_PP_DIS_V_BAC",
+			"description" : "something caused by DIS is BAC",
+			"pattern" : "{.+ * {s {np * <n.+ *> *<, ,> <vp * <vbn .+> * <pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *> *> *} * <vp <v.+ .+> * {np * <(n.+|j.+) bac00.+> *} *> *} *}",
+			"index" : 11
+		},
+
+		{
+			"name" : "comma_eq",
+			"description" : "BAC, cause of DIS,",
+			"pattern" : "{.+ * {np * <(n.+|j.+) bac00.+> *} <, ,> {np * <(n.+|j.+) .+> {pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *} *} *<, ,> *}",
+			"index" : 12
+		},
+		{
+			"name" : "comma_eq_rev",
+			"description" : "cause of DIS, BAC,",
+			"pattern" : "{.+ * {np * <(n.+|j.+) .+> {pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *} *} <, ,> {np <(n.+|j.+) bac00.+>} *<, ,> *}",
+			"index" : 12
+		},
+		{
+			"name" : "comma_eq_Wh_Vpp",
+			"description" : "BAC, pathogen associated with DIS,",
+			"pattern" : "{.+ * {np * <(n.+|j.+) bac00.+> *} <, ,> {np * <n.+ .+> *<, ,> <vp <vbn .+> * <pp <(in|to) *> * {np * <n.+ dis00.+> *} *> *> *} *<, ,> *}",
+			"index" : 12
+		},
+		{
+			"name" : "comma_eq_Wh_Ving",
+			"description" : "BAC, pathogen causing DIS,",
+			"pattern" : "{.+ * {np * <(n.+|j.+) bac00.+> *} <, ,> {np * <(n.+|j.+) *> <vbg .+> * <n.+ dis00.+> *} *<, ,> *}",
+			"index" : 12
+		},
+
+		{
+			"name" : "due_to",
+			"description" : "DIS due to BAC",
+			"pattern" : "{.+ * {np * <(n.+|j.+) dis00.+> *} * <jj due> <to *> {np * <(n.+|j.+) bac00.+> *} *}",
+			"index" : 13
+		},
+		{
+			"name" : "responsible",
+			"description" : "BAC is responsible for DIS",
+			"pattern" : "{.+ * {np * <(n.+|j.+) bac00.+> *} * <j.+ .+> <in for> {np * <(n.+|j.+) dis00.+> *} *}",
+			"index" : 13
+		},
+		{
+			"name" : "BAC_is_one_of_N_PP_DIS",
+			"description" : "BAC is one of the something of DIS",
+			"pattern" : "{.+ * {s * {np * <(n.+|j.+) bac00.+> *} * <vp <vbz *> * {np <cd one> <pp <(in|to) of> {np * <n.+ .+> * <pp <(in|to) *> * {np * <(n.+|j.+) dis00.+> *} *> *} *> *} *> *} *}",
+			"index" : 13
+		},
+		{
+			"name" : "N_PP_BAC_PP_DIS",
+			"description" : "something of BAC with DIS",
+			"pattern" : "{.+ * {np * <n.+ .+> <pp <(in|to) *> * {np * <(n.+|j.+) bac00.+> *} *> *} <pp <(in|to) *> * {np <(n.+|j.+) dis00.+> *} *> *}",
+			"index" : 13
+		},
+
+		{
+			"name" : "N_between_BAC_DIS",
+			"description" : "correlation between DIS and BAC",
+			"pattern" : "{.+ * <n.+ .+> <pp <in between> {np * <(n.+|j.+) dis00.+> * <(n.+|j.+) bac00.+> *} *}",
+			"index" : 13
+		},
+		{
+			"name" : "N_between_DIS_BAC",
+			"description" : "correlation between BAC and DIS",
+			"pattern" : "{.+ * <n.+ .+> <pp <in between> {np * <(n.+|j.+) bac00.+> * <(n.+|j.+) dis00.+> *} *}",
+			"index" : 13
+		},
+		{
+			"name" : "DIS_PP_N_Ving_BAC",
+			"description" : "DIS of something including BAC",
+			"pattern" : "{.+ * {np * <(n.+|j.+) dis00.+> *} <pp <in *> {np * <n.+ .+> <pp <vbg *> * {np * <(n.+|j.+) bac00.+> *} *> *} *> *}",
+			"index" : 13
+		},
+
+		{
+			"name" : "DIS_N_BAC",
+			"description" : "DIS agent BAC",
+			"pattern" : "{.+ * <(n.+|j.+) dis00.+> <n.+ .+> <(n.+|j.+) bac00.+> *}",
+			"index" : 14
+		},
+		{
+			"name" : "BAC_in_DIS",
+			"description" : "BAC in DIS",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) bac00.+> *<n.+ *>} <in in> {np * <(n.+|j.+) dis00.+> *} *}",
+			"index" : 14
+		},
+		{
+			"name" : "DIS_in_BAC",
+			"description" : "DIS in BAC",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) dis00.+> *<n.+ *>} <in in> {np *!<(v.+|p.+) *> <(n.+|j.+) bac00.+> *} *}",
+			"index" : 14
+		},
+		{
+			"name" : "DIS_in_BAC",
+			"description" : "DIS in BAC",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) dis00.+> *<n.+ *>} <in in> {np *!<(vp|pp) *> <(n.+|j.+) bac00.+> *} *}",
+			"index" : 14
+		},
+		{
+			"name" : "BAC_from_DIS",
+			"description" : "BAC from DIS",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) bac00.+>} *!<(vp|pp) *> <pp <in from> {np * <(n.+|j.+) dis00.+> *} *> *}",
+			"index" : 14
+		},
+		{
+			"name" : "DIS_from_BAC",
+			"description" : "DIS from BAC",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) dis00.+>} *!<(vp|pp) *> <pp <in from> {np * <(n.+|j.+) bac00.+> *} *> *}",
+			"index" : 14
+		},
+		{
+			"name" : "BAC_against_DIS",
+			"description" : "BAC against DIS",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) bac00.+>} *!<vp *> <pp <in against> {np * <(n.+|j.+) dis00.+> *} *> *}",
+			"index" : 14
+		},
+		{
+			"name" : "BAC_during_DIS",
+			"description" : "BAC during DIS",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) bac00.+> *} <pp <in during> {np * <(n.+|j.+) dis00.+> *} *> *}",
+			"index" : 14
+		},
+		{
+			"name" : "DIS_by_BAC",
+			"description" : "DIS by BAC",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) dis00.+> *} <in by> {np * <(n.+|j.+) bac00.+> *} *}",
+			"index" : 14
+		},
+		{
+			"name" : "BAC_among_DIS",
+			"description" : "DIS by BAC",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) bac00.+> *} <in among> {np * <(n.+|j.+) dis00.+> *} *}",
+			"index" : 14
+		},
+		{
+			"name" : "DIS_with_BAC",
+			"description" : "DIS with BAC",
+			"pattern" : "{.+ * {n.+ * <(n.+|j.+) dis00.+>} <in with> {np *!<(v.+|p.+) *> <(n.+|j.+) bac00.+> *} *}",
+			"index" : 14
+		},
+	]
+}
