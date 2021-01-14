@@ -1,0 +1,11 @@
+acl
+acl:relcl
+amod
+xcomp
+ccomp
+appos
+nmod:as
+conj:and
+conj:or
+advcl
+dep
