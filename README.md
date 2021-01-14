@@ -15,6 +15,10 @@ Our NER is based on [TaggerOne](https://www.ncbi.nlm.nih.gov/research/bionlp/too
 $ cd NER
 $ wget https://www.ncbi.nlm.nih.gov/research/bionlp/taggerone/TaggerOne-0.2.1.tgz
 $ tar -xvzf TaggerOne-0.2.1.tgz
+$ cd TaggerOne-0.2.1/
+$ mkdir model
+$ ./Train_NCBID.sh 10.0 1.5 model/model_NCBID 2>&1 | tee train_NCBID.log
+$ ./Train_BC5CDRD.sh 10.0 0.0 model/model_BC5CDRD 2>&1 | tee train_BC5CDRD.log
 $ cd ..
 ```
 
