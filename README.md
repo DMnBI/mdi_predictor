@@ -18,6 +18,11 @@ $ tar -xvzf TaggerOne-0.2.1.tgz
 $ cd ..
 ```
 
+Download executable jar file (dep_ensemble.jar, NER/DBNER.jar) from google docs. The code for the jar file is in the [executable_jar_code].
+* dep_ensemble.jar https://drive.google.com/file/d/1rKBjgkyKGcCYVSlb-gOnNckx8LPhWKyb/view?usp=sharing (located in [mdi_predictor]/)
+* NER/DBNER.jar https://drive.google.com/file/d/1t8-DXiP7HExqIj5cZUxSdJgd8fILZ00H/view?usp=sharing (located in [mdi_predictor]/[NER]/)
+
+
 ## Exec
 *Run it in a docker container
 ### NER
