@@ -1,0 +1,4 @@
+11179346_1	DIS00Buruli_ulcers&BAC00Mycobacterium_ulcerans&cause@0.9998823667803788,DIS00chronic_necrotizing_skin_ulcers&BAC00Mycobacterium_ulcerans&cause@0.9998823667803788,DIS00Buruli_ulcers&BAC00acid-fast_bacillus&cause@0.9993688196928255,DIS00chronic_necrotizing_skin_ulcers&BAC00acid-fast_bacillus&cause@0.9992444736906241
+11179346_2	None
+11179346_3	None
+11179346_4	DIS00M0_ulcerans_infection&BAC00M0_ulcerans&mount@0.6502242152466368

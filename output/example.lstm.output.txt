@@ -1,0 +1,4 @@
+11179346_1	BAC00Mycobacterium_ulcerans is a slow-growing , BAC00acid-fast_bacillus that causes DIS00chronic_necrotizing_skin_ulcers known as DIS00Buruli_ulcers .	true
+11179346_2	We examined immune_responses to BAC00M0_ulcerans and M. bovis BCG in patients with DIS00M0_ulcerans_disease and in 20 healthy_control subjects .	false
+11179346_3	Serum from 9 of 11 patients with DIS00M0_ulcerans_disease , but no control subject , contained antibodies to BAC00M0_ulcerans .	false
+11179346_4	The results indicate that patients with DIS00M0_ulcerans_infection mount an immune_response to BAC00M0_ulcerans as evidenced by antibody production , but they demonstrate profound_systemic_T-cell anergy to mycobacterial_antigens .	true
