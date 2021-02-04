@@ -24,7 +24,7 @@ $ cd ..
 
 You can create jar files with code in [executable_jar_code] or download excutable jar files from Google Docs.
 * dep_ensemble.jar https://drive.google.com/file/d/1rKBjgkyKGcCYVSlb-gOnNckx8LPhWKyb/view?usp=sharing (place it in **mdi_predictor**/)
-* NER/DBNER.jar https://drive.google.com/file/d/1t8-DXiP7HExqIj5cZUxSdJgd8fILZ00H/view?usp=sharing (place in **mdi_predictor/NER**/)
+* NER/DBNER.jar https://drive.google.com/file/d/1t8-DXiP7HExqIj5cZUxSdJgd8fILZ00H/view?usp=sharing (place it in **mdi_predictor/NER**/)
 
 
 ## Exec
