@@ -11,7 +11,7 @@ def writeAbstracts(writer, abstracts):
             writer.write(abst+'\n')
         else:
             annotation = getOnlyAnnotation(abst)
-            if annotation is not "":
+            if annotation != "":
                 writer.write(annotation+'\n')
         isFirst = False
 
@@ -41,13 +41,13 @@ def getAbstract(file_reader):
 
 def main():
     if len(sys.argv) == 1:
-        print "please input TaggerOne output."
+        print("please input TaggerOne output.")
         exit(1)
 
     tagOne_fileList = sys.argv[1:-1]
     tagOne_fileReaders = []
     for tagOne_file in tagOne_fileList:
-        print tagOne_file
+        print(tagOne_file)
         tagOne_fileReaders.append(getIO(tagOne_file, 'r'))
     
     output_writer = getIO(sys.argv[-1], 'w')
