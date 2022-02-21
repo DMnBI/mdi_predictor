@@ -81,8 +81,8 @@ def mergeTaggerOneOutput(BC5CDRD_output, NCBID_output, outputFile):
 	output = os.system(command)
 
 def runNER(input_file, output_file):
-	tagOne_BC5CDRD_model = TAGGERONE_PATH+"/model/model_BC5CDRD.bin"
-	tagOne_NCBID_model = TAGGERONE_PATH+"/model/model_NCBID.bin"
+	tagOne_BC5CDRD_model = TAGGERONE_PATH+"/output/model_BC5CDRD.bin"
+	tagOne_NCBID_model = TAGGERONE_PATH+"/output/model_NCBID.bin"
 	
 	input_abstract = input_file
 	preproc_output = output_file+".preproc.txt"
